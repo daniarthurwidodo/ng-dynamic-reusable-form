@@ -1,0 +1,24 @@
+<p>forms works!</p>
+<form >
+    <div *ngFor="let form of item">
+
+        <div *ngIf="form.type === 'text'">
+            <label for="">{{form.label}}</label>
+            <input   type="text" name="" id="">
+        </div>
+
+        <div *ngIf="form.type === 'number'">
+            <label for="">number</label>
+            <input   type="number" name="" id="">
+        </div>
+
+        <div *ngIf="form.type === 'select'">
+            <label for="cars">Choose a car:</label>
+
+            <select name="cars" id="cars">
+              <option *ngFor="let data of form.data" [value]="data.value">{{data.value}}</option>
+            </select> 
+        </div>
+
+    </div>
+</form>
